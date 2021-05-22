@@ -2,12 +2,18 @@
 @import url(./main.css);
 
 :root {
-    --color-white: #fff;
-    --color-gnb: #333333;
-    --color-red: #E1002A;
-    --color-light-red: #e0002a;
-    --color-dark-red: #d0112b;
-    --color-grey: #98a2ac;
-    --color-orange: #ee7421;
-    --footer-bg: #303030;
+  --color-white: #fff;
+  --color-gnb: #333333;
+  --color-red: #e1002a;
+  --color-light-red: #e0002a;
+  --color-dark-red: #d0112b;
+  --color-grey: #98a2ac;
+  --color-orange: #ee7421;
+  --footer-bg: #303030;
+}
+.section-wrap {
+  /* text-align: left; */
+  /* max-width: 1600px; */
+  /* margin: 0 auto; */
+  padding: 0 30px;
 }
