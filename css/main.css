@@ -10,6 +10,7 @@
   height: 30px;
   border-bottom: 1px solid #f5f5f5;
   background: #f5f5f5;
+  z-index: 9999;
 }
 .top-gnb a {
   text-align: center;
@@ -30,7 +31,7 @@
   position: fixed;
   top: 30px;
   left: 0%;
-  /* z-index: 101; */
+  z-index: 101;
   width: 100%;
   background-color: #fff;
 }
@@ -71,7 +72,6 @@ header .h-group .top-logo a {
   width: 30%;
 }
 .util-menu-pc .btn-lang {
-  /* font-size: 0; */
   display: inline-block;
   text-align: left;
   vertical-align: top;
@@ -129,30 +129,89 @@ header .h-group .top-logo a {
 }
 
 /* section com-info */
+.com-info {
+  z-index: -99999;
+}
 .com-info .container {
   padding-top: 80px;
-  line-height: 0;
-  font-size: 0;
-  display: -webkit-box;
   display: flex;
   justify-content: space-between;
   max-width: 1600px;
 }
 .com-info .container li {
   margin-right: 30px;
+  position: relative;
 }
 .com-info .container li a {
-  max-height: 650px;
-  width: 100%;
-  overflow: hidden;
   display: inline-block;
+  overflow: hidden;
 }
-.com-info .container li img {
+.com-info .container li .info-img {
   width: 100%;
   height: 100%;
+  transition: all 0.6s;
+}
+.com-info .container .com-info-desc {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  color: var(--color-white);
+  text-align: center;
+}
+.com-info .container li:hover .info-img {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.com-info .container .com-info-desc p:nth-child(1) {
+  font-size: 38px;
+}
+.com-info .container .com-info-desc p:nth-child(2) {
+  font-size: 26px;
+  margin-top: 35px;
 }
 /* section media-center */
-
+.media-center > h1 {
+  font-size: 40px;
+  font-family: "nanum-square-eb", sans-serif;
+  color: #d0112b;
+  text-align: left;
+  margin-left: 30px;
+  padding-top: 50px;
+}
+.media-center {
+  /* max-width: 100%; */
+  height: auto;
+}
+.media-center ul li img {
+  width: 770px;
+  height: 520px;
+}
+.media-center ul li {
+  display: inline-block;
+  float: left;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #000;
+  /* width: 100%; */
+}
+.media-center ul li .text-box {
+  border: 1px solid #000;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 110px;
+  padding: 17px 0 0 20px;
+  color: var(--color-white);
+  background: rgba(0, 0, 0, 0.6);
+  line-height: 1.3;
+  font-size: 30px;
+  padding-right: 20px;
+}
 /* section invest-info */
 
 /* footer */
+footer {
+  border: 1px solid #000;
+}
